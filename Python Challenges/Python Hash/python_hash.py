@@ -10,7 +10,11 @@ for x in password_list:
         elif x.islower():
             x = "?l"
         elif x.isdigit():
-            x = "?d"    
+            x = "?d"
+        elif x.isspace():
+            x = "\n"
+        else:
+            x = "?s"    
         masked_list.append(x)
 
 masked_passwords = ''.join(masked_list)
@@ -20,4 +24,4 @@ from collections import Counter
 counted_masks = Counter(masked_password_list)
 print("The top 3 Password Masks are: ")
 print("------------------------------")
-print(counted_masks.most_common(3))
+print(counted_masks.most_common(4))
