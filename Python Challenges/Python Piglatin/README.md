@@ -1,1 +1,1 @@
-Blank
+A quick Python script that can translate any word or sentence into Piglatin.
